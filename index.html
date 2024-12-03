@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="table">
+      <section class="table__header">
+        <button id="addBtn" class="button button--primary">
+          <i class="bx bx-plus"></i>
+        </button>
+
+        <div class="input-group">
+          <input type="search" placeholder="Buscar datos..." />
+          <i class="bx bx-search"></i>
+        </div>
+      </section>
+
+      <section class="table__body">
+        <table>
+          <thead>
+            <tr>
+              <th>Comprado</th>
+              <th>Nombre</th>
+              <th>Rango Precio</th>
+              <th class="sortable">
+                plataforma
+                <span class="icon-arrow">&UpArrow;</span>
+              </th>
+              <th class="sortable">
+                Prioridad
+                <span class="icon-arrow">&UpArrow;</span>
+              </th>
+              <th>Disponible</th>
+              <th>Accion</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody">
+            <!-- <tr>
+              <td>No</td>
+              <td>The medium</td>
+              <td>40500</td>
+              <td>Ps5</td>
+              <td>
+                <p class="status verde">Verde</p>
+              </td>
+              <td>No</td>
+              <td>
+                <button class="button button--secondary">Editar</button>
+                <button class="button button--tertiary">Eliminar</button>
+              </td>
+            </tr> -->
+            <!-- <tr>
+              <td>No</td>
+              <td>Hades</td>
+              <td>40500</td>
+              <td>Ps5</td>
+              <td>
+                <p class="status amarillo">Amarillo</p>
+              </td>
+              <td>Si</td>
+              <td>
+                <button class="button button--secondary">Editar</button>
+                <button class="button button--tertiary">Eliminar</button>
+              </td>
+            </tr> -->
+            <!-- <tr>
+              <td>No</td>
+              <td>Street of rage 4</td>
+              <td>35000</td>
+              <td>Ps4</td>
+              <td>
+                <p class="status verde">Verde</p>
+              </td>
+              <td>Si</td>
+              <td>
+                <button class="button button--secondary">Editar</button>
+                <button class="button button--tertiary">Eliminar</button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- MODAL FORM -->
+    <div class="modal-container">
+      <div class="modal">
+        <header>
+          <button class="button closeBtn">
+            <i class="bx bx-x"></i>
+          </button>
+          <h2 class="modalTitle">Ingresar datos</h2>
+        </header>
+
+        <form action="#" id="formRegister">
+          <div class="main-game-info">
+            <div class="game-input-box">
+              <label for="obtInput">Comprado</label>
+              <select id="obtInput">
+                <option value="No">No</option>
+                <option value="Si">Si</option>
+              </select>
+            </div>
+
+            <div class="game-input-box">
+              <label for="nameInput">Nombre</label>
+              <input type="text" id="nameInput" required />
+            </div>
+
+            <div class="game-input-box">
+              <label for="priceInput">Rango Precio</label>
+              <input type="text" id="priceInput" required />
+            </div>
+
+            <div class="game-input-box">
+              <label for="platformInput">Plataforma</label>
+              <select id="platformInput">
+                <option value="Ps4">Ps4</option>
+                <option value="Ps5">Ps5</option>
+              </select>
+            </div>
+
+            <div class="game-input-box">
+              <label for="priorityInput">Prioridad</label>
+              <select id="priorityInput">
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+              </select>
+            </div>
+
+            <div class="game-input-box">
+              <label for="avaiInput">Disponible</label>
+              <select id="avaiInput">
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </div>
+
+          <footer class="form-submit-btn">
+            <button form="formRegister" class="button submitBtn">
+              <i class="bx bx-save"></i>
+            </button>
+          </footer>
+        </form>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
